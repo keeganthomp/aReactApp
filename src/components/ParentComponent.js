@@ -28,22 +28,24 @@ class ParentComponent extends Component {
     //check console to see if firing
     console.log("fired");
     //set the state for props and for value (prevents output from appearing when typing)
-    this.setState({
-      whatToSay: this.state.whatToSay,
-      whatWasSaid: this.state.whatToSay
-    });
-    //clear our input by resetting state
-    this.setState({ whatToSay: "" });
-    let whatToSayInput = document.querySelector("#whatToSay");
-    whatToSayInput.value = "";
+    if (this.state.whatToSay.length < 5) {
+      alert("Please type 5 or more characters");
+    } else {
+      this.setState({
+        whatToSay: this.state.whatToSay,
+        whatWasSaid: this.state.whatToSay
+      });
+      //clear our input by resetting state
+      this.setState({ whatToSay: "" });
+      let whatToSayInput = document.querySelector("#whatToSay");
+      whatToSayInput.value = "";
+    }
   }
 
   render() {
     return (
       <div>
-        <div className="subTitle">
-          Say what you feel
-        </div>
+        <div className="subTitle">Say what you feel</div>
         <div>
           <input
             id="whatToSay"
