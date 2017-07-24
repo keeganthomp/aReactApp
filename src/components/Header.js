@@ -5,7 +5,7 @@ import '../styles/App.css';
 class Header extends Component {
   render() {
     return (
-      <nav>I am the Navigation Bar</nav>
+      <div className="header">Say It Don't Spray It</div>
     );
   }
 }

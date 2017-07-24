@@ -6,7 +6,7 @@ import '../styles/App.css';
 class DisplayComponent extends Component {
   render() {
     return (
-      <div>{this.props.sayWhat}</div>
+      <div className="whatYouSaid">{this.props.sayWhat}</div>
     );
   }
 }
