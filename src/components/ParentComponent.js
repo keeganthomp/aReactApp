@@ -45,13 +45,12 @@ class ParentComponent extends Component {
   render() {
     return (
       <div>
-        <div className="subTitle">Say what you feel</div>
         <div>
           <input
             id="whatToSay"
             onChange={this.handleInput}
             type="text"
-            placeholder="Say It!"
+            placeholder="Say Anything"
           />
         </div>
         <div>

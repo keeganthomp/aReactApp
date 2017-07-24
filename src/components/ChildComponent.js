@@ -8,7 +8,7 @@ class ChildComponent extends Component {
     return (
       <div>
         <div>
-          <input className="submitBtn" type="submit" onClick={this.props.onClick}/>
+          <input className="submitBtn" type="submit" value="Say It" onClick={this.props.onClick}/>
         </div>
       </div>
     );
